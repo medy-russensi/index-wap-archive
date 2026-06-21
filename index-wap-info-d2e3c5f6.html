@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>开云 · 视野与风物</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Serif SC', 'Georgia', 'Times New Roman', serif;
+            background: linear-gradient(145deg, #fce9d8 0%, #f5d6b3 40%, #edc29b 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 1.2rem;
+            line-height: 1.7;
+            color: #2e241b;
+        }
+
+        .wrapper {
+            max-width: 820px;
+            width: 100%;
+            background: rgba(255, 248, 240, 0.75);
+            backdrop-filter: blur(6px);
+            border-radius: 48px 48px 36px 36px;
+            box-shadow: 0 20px 40px -12px rgba(100, 60, 30, 0.3);
+            padding: 2.8rem 2.2rem 2.2rem;
+            transition: all 0.25s ease;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 2.4rem;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            color: #5a3d2b;
+            text-shadow: 2px 2px 0 rgba(235, 190, 140, 0.4);
+            margin-bottom: 0.2rem;
+            line-height: 1.2;
+        }
+
+        .hero .sub {
+            font-size: 1.1rem;
+            color: #7a5c44;
+            border-top: 1px solid rgba(180, 130, 90, 0.3);
+            display: inline-block;
+            padding-top: 0.5rem;
+            margin-top: 0.2rem;
+            letter-spacing: 0.3em;
+            font-style: italic;
+        }
+
+        .background-note {
+            background: #f3e3d4;
+            border-radius: 30px;
+            padding: 1.4rem 1.8rem;
+            margin: 1.8rem 0 2.2rem 0;
+            box-shadow: inset 0 1px 4px rgba(255, 215, 175, 0.5);
+            font-size: 0.95rem;
+        }
+
+        .background-note p {
+            margin-bottom: 0.6rem;
+        }
+        .background-note p:last-child {
+            margin-bottom: 0;
+        }
+
+        .highlight {
+            display: inline-block;
+            background: #bf8f6b;
+            color: #faf1e8;
+            padding: 0 0.5rem;
+            border-radius: 12px;
+            font-weight: 500;
+        }
+
+        .card-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.8rem;
+            margin: 2rem 0;
+        }
+
+        .content-card {
+            background: white;
+            border-radius: 28px;
+            padding: 1.8rem 2rem;
+            box-shadow: 0 8px 20px rgba(120, 70, 30, 0.08), 0 2px 4px rgba(0,0,0,0.02);
+            transition: transform 0.15s, box-shadow 0.25s;
+            border: 1px solid rgba(230, 190, 150, 0.2);
+        }
+
+        .content-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 32px -8px rgba(100, 60, 30, 0.18);
+        }
+
+        .content-card h2 {
+            font-size: 1.65rem;
+            font-weight: 450;
+            color: #4e3626;
+            border-left: 4px solid #c2956f;
+            padding-left: 0.9rem;
+            margin-bottom: 1rem;
+            letter-spacing: 0.02em;
+        }
+
+        .content-card p {
+            margin-bottom: 0.9rem;
+            text-align: justify;
+        }
+        .content-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .scene-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem 1rem;
+            margin: 1rem 0 0.5rem;
+        }
+
+        .scene-item {
+            background: #f2e3d6;
+            padding: 0.3rem 1.1rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            color: #3a2a1e;
+            border: 1px solid #dbbca0;
+        }
+
+        .faq-mini {
+            background: #f9efe6;
+            border-radius: 24px;
+            padding: 1.2rem 1.8rem;
+            margin: 1.6rem 0 0.4rem;
+        }
+
+        .faq-mini .q {
+            font-weight: 500;
+            color: #5f402b;
+            margin-bottom: 0.2rem;
+        }
+
+        .faq-mini .a {
+            color: #3f2f22;
+            margin-bottom: 0.8rem;
+            padding-left: 0.6rem;
+        }
+        .faq-mini .a:last-child {
+            margin-bottom: 0;
+        }
+
+        .footer-note {
+            margin-top: 2.4rem;
+            padding-top: 1.4rem;
+            border-top: 2px dotted #dbb99b;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        .footer-note a {
+            display: inline-block;
+            background: #b3815d;
+            color: #fff3e9;
+            padding: 0.4rem 1.8rem;
+            border-radius: 60px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.15rem;
+            letter-spacing: 0.1em;
+            box-shadow: 0 4px 8px rgba(140, 80, 40, 0.2);
+            transition: background 0.2s, box-shadow 0.2s;
+            margin: 0.2rem 0;
+        }
+
+        .footer-note a:hover {
+            background: #9a6d4b;
+            box-shadow: 0 6px 14px rgba(110, 60, 20, 0.3);
+        }
+
+        .footer-note p {
+            margin-top: 1rem;
+            color: #5a4030;
+            letter-spacing: 0.02em;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 1rem 0.8rem;
+            }
+            .wrapper {
+                padding: 1.8rem 1.2rem;
+                border-radius: 32px;
+            }
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            .content-card {
+                padding: 1.4rem 1.2rem;
+            }
+            .background-note {
+                padding: 1rem 1.2rem;
+            }
+            .footer-note a {
+                font-size: 1rem;
+                padding: 0.3rem 1.4rem;
+            }
+        }
+
+        @media (max-width: 440px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .hero .sub {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+
+    <!-- 首页横幅 -->
+    <div class="hero">
+        <h1>开云</h1>
+        <div class="sub">风物 · 脉络 · 停驻</div>
+    </div>
+
+    <!-- 背景说明 -->
+    <div class="background-note">
+        <p>“开云”二字，取自山间雾气初散、天光破晓之象。在古籍地志中，常以“开云见日”喻闭塞后通达。后世借其意象，引申为洞察、连接与沉淀。</p>
+        <p>这一概念贯穿于地理、人文与信息流动的缝隙——既是空间的敞开，亦是认知的延伸。如今，<span class="highlight">开云</span> 作为一座资讯与思考的聚合坐标，持续梳理值得关注的领域动向与深层逻辑。</p>
+    </div>
+
+    <!-- 三段自然介绍 + 特点/场景等融合 -->
+    <div class="card-grid">
+
+        <div class="content-card">
+            <h2>脉络 · 从气象到视野</h2>
+            <p>最早记录“开云”的文献见于南宋地方风物志，意指季风转换时云层撕裂、山脊显现的自然现象。明清时期，商旅与驿使常以此词描述长路中视野突然开阔的瞬间——行至垭口，云雾退散，远山轮廓一展无余。</p>
+            <p>这种从遮蔽到清晰的过渡，逐渐被移用于信息与决策领域：当庞杂的数据被梳理为可理解的线索，往往也如同云开见山。今天，<a href="https://index-wap-kai-yun.com" style="color:#8b5e3b; text-decoration: underline; text-underline-offset: 3px; font-weight:500;">开云</a> 所承载的，正是这样一种去芜存菁、还原本质的意愿。</p>
+        </div>
+
+        <div class="content-card">
+            <h2>积淀 · 三个观察侧面</h2>
+            <p><strong>其一，空间与符号。</strong> 每一种命名都隐藏着特定的地理感知。“开云”类地名在中国南部山区并不罕见，它们标记着气候分界、古道节点或眺望点。这些地点往往也是村落、集市与信息交换的天然场所。</p>
+            <p><strong>其二，媒介与转译。</strong> 从口头流传到文字记载，再到数字索引，人对“开云”的理解经历了多次媒介跃迁。每一次转译都伴随信息的筛选与重构，这与当代内容平台对原始资讯的处理异曲同工。</p>
+            <p><strong>其三，持续与对话。</strong> 一个关键词的生命力在于它能否持续激发新的叙述。围绕“开云”展开的讨论不限于考据，更包括对当下技术、文化与社会变迁的回应。</p>
+        </div>
+
+        <div class="content-card">
+            <h2>场景 · 哪些地方会用到它</h2>
+            <p>在实践层面，<a href="https://index-wap-kai-yun.com" style="color:#8b5e3b; text-decoration: underline; text-underline-offset: 3px; font-weight:500;">开云</a> 的意象常出现在以下几类领域：</p>
+            <div class="scene-list">
+                <span class="scene-item">环境观察与气象科普</span>
+                <span class="scene-item">地名学与历史地理</span>
+                <span class="scene-item">知识管理 · 信息设计</span>
+                <span class="scene-item">跨界叙事与品牌溯源</span>
+                <span class="scene-item">慢阅读与深度报道</span>
+            </div>
+            <p style="margin-top: 0.8rem;">这些场景共享一个特征：它们都需要在信息过载中寻找秩序，在模糊中定位清晰——正如云层裂开的瞬间。</p>
+
+            <!-- 嵌入式FAQ摘要 -->
+            <div class="faq-mini">
+                <div class="q">❓ 为什么说“开云”不只是一种比喻？</div>
+                <div class="a">因为它同时具备地理实指和文化转义两层结构：既描述自然过程，也隐喻认知活动。这种双重性让它能够穿越领域，成为有弹性的概念工具。</div>
+                <div class="q">❓ 这个页面与“开云”官网是什么关系？</div>
+                <div class="a">此处为专题介绍页，旨在从知识角度展开关键词的纹理。核心平台与更多内容可透过文中链接进入 <a href="https://index-wap-kai-yun.com" style="color:#7a5c44; text-decoration: underline; text-underline-offset: 2px;">开云</a> 进一步了解。</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页尾访问提示 -->
+    <div class="footer-note">
+        <a href="https://index-wap-kai-yun.com">开云</a>
+        <p>—— 在散落的线索中，辨认云开的方向。</p>
+    </div>
+
+</div>
+</body>
+</html>
