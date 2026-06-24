@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>再次翻阅 · 爱游戏</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #f8f4ef;
+            color: #2c2c2c;
+            font-family: Georgia, 'Times New Roman', Times, 'Songti SC', 'Noto Serif SC', serif;
+            line-height: 1.8;
+            padding: 2.5rem 1.2rem;
+            max-width: 820px;
+            margin: 0 auto;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .page-wrap {
+            background: #fffcf7;
+            padding: 2.8rem 2.2rem 3rem;
+            border-radius: 24px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
+        }
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            letter-spacing: 2px;
+            margin-bottom: 0.1rem;
+            color: #1e1e1e;
+            border-left: 6px solid #b8a58a;
+            padding-left: 1.2rem;
+        }
+        .subhead {
+            font-size: 1rem;
+            color: #7b6b58;
+            margin: 0.2rem 0 1.6rem 1.8rem;
+            font-style: italic;
+            border-bottom: 1px dashed #dccfc0;
+            padding-bottom: 1rem;
+        }
+        .article-meta {
+            font-size: 0.9rem;
+            color: #969087;
+            margin-bottom: 2.2rem;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid #eae2d8;
+            padding-bottom: 0.8rem;
+        }
+        .article-meta span {
+            margin-right: 1.8rem;
+        }
+        p {
+            margin-bottom: 1.6rem;
+            text-align: justify;
+        }
+        .quote-block {
+            background: #f1ece5;
+            border-left: 6px solid #b8a58a;
+            padding: 1.2rem 1.8rem;
+            margin: 2rem 0 2rem;
+            border-radius: 6px 12px 12px 6px;
+            font-style: normal;
+            color: #3f3a34;
+            font-size: 0.98rem;
+            box-shadow: inset 0 1px 4px rgba(0,0,0,0.02);
+        }
+        .quote-block p {
+            margin-bottom: 0.4rem;
+        }
+        .quote-block .quote-source {
+            text-align: right;
+            font-size: 0.85rem;
+            color: #8a7d6d;
+            margin-top: 0.6rem;
+        }
+        .highlight-box {
+            background: #fffcf3;
+            border: 1px solid #e2d5c4;
+            border-radius: 16px;
+            padding: 1.6rem 2rem;
+            margin: 2.2rem 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.02);
+        }
+        .highlight-box p:last-child {
+            margin-bottom: 0;
+        }
+        .inline-link {
+            color: #6b4f3a;
+            text-decoration: none;
+            border-bottom: 1px solid #c6b29b;
+            font-weight: 400;
+            transition: border-color 0.2s, color 0.2s;
+        }
+        .inline-link:hover {
+            color: #3f2c1e;
+            border-bottom-color: #3f2c1e;
+        }
+        .visit-note {
+            background: #f4efe8;
+            padding: 1.2rem 1.8rem;
+            border-radius: 40px 12px 12px 40px;
+            display: inline-block;
+            font-size: 0.95rem;
+            border-left: 4px solid #b8a58a;
+            margin: 1rem 0 2rem;
+        }
+        .faq-mini {
+            margin-top: 2.6rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid #e4dbd0;
+        }
+        .faq-item {
+            margin-bottom: 1.2rem;
+        }
+        .faq-q {
+            font-weight: 500;
+            color: #4f4136;
+        }
+        .faq-a {
+            color: #5f5548;
+            padding-left: 0.6rem;
+        }
+        .footer-note {
+            text-align: center;
+            margin-top: 3rem;
+            font-size: 0.85rem;
+            color: #a1978b;
+            border-top: 1px solid #e8dfd4;
+            padding-top: 1.8rem;
+            letter-spacing: 1px;
+        }
+        @media (max-width: 540px) {
+            body {
+                padding: 1.4rem 0.8rem;
+            }
+            .page-wrap {
+                padding: 1.8rem 1.2rem 2rem;
+                border-radius: 16px;
+            }
+            h1 {
+                font-size: 1.7rem;
+                padding-left: 0.8rem;
+            }
+            .article-meta span {
+                display: block;
+                margin-right: 0;
+                margin-bottom: 0.2rem;
+            }
+            .highlight-box {
+                padding: 1.2rem 1.4rem;
+            }
+            .quote-block {
+                padding: 0.8rem 1.2rem;
+            }
+            .visit-note {
+                padding: 0.8rem 1.2rem;
+                border-radius: 24px 8px 8px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrap">
+    <h1>爱游戏</h1>
+    <div class="subhead">—— 收藏的页面，常回来看看</div>
+
+    <div class="article-meta">
+        <span>📅 2025 · 春</span>
+        <span>📌 随笔 · 再访</span>
+        <span>✍️ 第 607183660303c60c 次翻阅</span>
+    </div>
+
+    <p>有些站点，第一次遇见是缘分，第二次点开则成了习惯。<strong>爱游戏</strong>于我而言，就是这样一个地方。它不张扬，不催促，安安静静地待在收藏夹的一角，等你某天忽然想起，再次推开那扇门。</p>
+
+    <p>我是在一个周末的午后偶然发现它的。起初只是随便逛逛，看看页面上的字句，点开几个感兴趣的版块。后来发现，每次再去，总有一些新东西——或是文章更新了，或是角落多了几句耐人寻味的话。它不像那些拼命留住你的网站，反而更像一位老朋友，你来了，它倒一杯茶，你走了，它也不挽留。</p>
+
+    <div class="quote-block">
+        <p>“再次访问一个地方，不是因为那里有多华丽，而是因为你知道，它总在那里等你。”</p>
+        <div class="quote-source">—— 某个下午，浏览器收藏夹里的自言自语</div>
+    </div>
+
+    <p>我习惯把喜欢的页面放进书签，但大部分书签后来都沉默了。只有少数几个，每隔一段时间就想点开——<a href="https://igame--zh.com" class="inline-link">爱游戏</a>是其中之一。它的内容不追求刷屏，也不堆砌热点，而是慢慢打磨每一篇短文、每一段介绍。读起来不累，合上之后又觉得心里踏实。</p>
+
+    <div class="highlight-box">
+        <p><strong>收藏的理由可以很简单：</strong></p>
+        <p>当你有一天忽然想找点纯粹的东西，不需要注册、不需要登录、不需要被推送淹没——只需打开书签，点一下那个熟悉的名字。像翻开一本旧书，气味和手感都还在。</p>
+    </div>
+
+    <p>如果你也和我一样，习惯把好东西留在手边，不妨把 <strong>爱游戏</strong> 放进收藏夹。不必每天惦记，但当你再次想起它时，它仍然保持着当初让你喜欢的模样。有人说，持续关注一个地方，是因为它值得被反复阅读——这话不假。</p>
+
+    <div class="visit-note">
+        🔖 已收藏 · 常回来
+    </div>
+
+    <p>最近一次访问，发现页面底部多了一行小字，写着“感谢再次光临”。那一刻莫名觉得温暖。一个网站如果能记住老访客，那它一定也记得自己最初的样子。而这，大概就是我一直留着它书签的原因。</p>
+
+    <div class="faq-mini">
+        <div class="faq-item">
+            <div class="faq-q">❓ 为什么值得再次访问？</div>
+            <div class="faq-a">内容真实、节奏舒缓，每次去都可能发现之前没注意到的细节。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">❓ 我需要注册或留下信息吗？</div>
+            <div class="faq-a">完全不用。像翻开一本书一样自然，收藏即是最好的互动。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">❓ 如果很久没去，页面会变样吗？</div>
+            <div class="faq-a">可能会更新内容，但气质不会变——这也是很多人持续关注它的原因。</div>
+        </div>
+    </div>
+
+    <div class="footer-note">
+        <span>再次访问 · 就是最好的收藏</span>
+    </div>
+</div>
+</body>
+</html>
